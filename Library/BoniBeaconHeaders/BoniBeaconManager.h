@@ -158,5 +158,16 @@ monitoringDidFailForRegion:(BoniBeaconRegion *)region
  */
 - (void)requestStateForRegion:(BoniBeaconRegion *)region;
 
+/**
+ * Start location updates. Continue ranged beacons if Background Mode is open.
+ *
+ */
+- (void)startUpdatingLocation;
+
+/**
+ * Stop location updates.
+ *
+ */
+- (void)stopUpdatingLocation;
 
 @end
