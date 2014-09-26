@@ -12,6 +12,8 @@
 
 #warning define your own uuid!
 #define BONI_UUID @"YOUR-BONI-BEACON_UUID"
+#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+
 
 @interface ViewController ()
 
@@ -37,7 +39,9 @@
     self.region = [[BoniBeaconRegion alloc]initWithProximityUUID:[[NSUUID alloc]initWithUUIDString:BONI_UUID] identifier:@"region"];
     
     [self.boniBeaconManager startRangingBeaconsInRegion:self.region];
-    [self.boniBeaconManager requestAlwaysAuthorization];
+    if (IS_OS_8_OR_LATER) {
+        [self.boniBeaconManager requestAlwaysAuthorization];
+    }
 }
 
 - (void)boniBeaconManager:(BoniBeaconManager *)beaconManager didRangeBeacons:(NSArray *)beacons inRegion:(BoniBeaconRegion *)region{
