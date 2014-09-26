@@ -37,6 +37,7 @@
     self.region = [[BoniBeaconRegion alloc]initWithProximityUUID:[[NSUUID alloc]initWithUUIDString:BONI_UUID] identifier:@"region"];
     
     [self.boniBeaconManager startRangingBeaconsInRegion:self.region];
+    [self.boniBeaconManager requestAlwaysAuthorization];
 }
 
 - (void)boniBeaconManager:(BoniBeaconManager *)beaconManager didRangeBeacons:(NSArray *)beacons inRegion:(BoniBeaconRegion *)region{

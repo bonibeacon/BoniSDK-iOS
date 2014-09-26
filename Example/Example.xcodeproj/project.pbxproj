@@ -20,11 +20,11 @@
 		F06EA789190FF250009276FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06EA76B190FF250009276FE /* UIKit.framework */; };
 		F06EA791190FF250009276FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F06EA78F190FF250009276FE /* InfoPlist.strings */; };
 		F06EA793190FF250009276FE /* ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F06EA792190FF250009276FE /* ExampleTests.m */; };
-		F06EA7A2190FF3CF009276FE /* libBoniBeaconSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F06EA7A1190FF3CF009276FE /* libBoniBeaconSDK.a */; };
 		F06EA7A9190FF912009276FE /* BeaconTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F06EA7A8190FF912009276FE /* BeaconTableViewCell.m */; };
 		F06EA7AC1910D21F009276FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F06EA7AB1910D21F009276FE /* ViewController.m */; };
 		F06EA7AF1910D63C009276FE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06EA7AD1910D425009276FE /* CoreLocation.framework */; };
 		F06EA7B11910D642009276FE /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06EA7B01910D642009276FE /* CoreBluetooth.framework */; };
+		F0A821EF19D596DC0009E6DC /* libBoniBeaconSDK_v0.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A821EE19D596DC0009E6DC /* libBoniBeaconSDK_v0.2.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,6 @@
 		F06EA78E190FF250009276FE /* ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		F06EA790190FF250009276FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F06EA792190FF250009276FE /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
-		F06EA7A1190FF3CF009276FE /* libBoniBeaconSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBoniBeaconSDK.a; sourceTree = "<group>"; };
 		F06EA7A4190FF3FE009276FE /* BoniBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoniBeacon.h; sourceTree = "<group>"; };
 		F06EA7A5190FF3FE009276FE /* BoniBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoniBeaconManager.h; sourceTree = "<group>"; };
 		F06EA7A6190FF3FE009276FE /* BoniBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoniBeaconRegion.h; sourceTree = "<group>"; };
@@ -65,6 +64,7 @@
 		F06EA7AB1910D21F009276FE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F06EA7AD1910D425009276FE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F06EA7B01910D642009276FE /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		F0A821EE19D596DC0009E6DC /* libBoniBeaconSDK_v0.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBoniBeaconSDK_v0.2.a; path = ../Library/libBoniBeaconSDK_v0.2.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +72,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0A821EF19D596DC0009E6DC /* libBoniBeaconSDK_v0.2.a in Frameworks */,
 				F06EA7B11910D642009276FE /* CoreBluetooth.framework in Frameworks */,
 				F06EA7AF1910D63C009276FE /* CoreLocation.framework in Frameworks */,
 				F06EA76A190FF250009276FE /* CoreGraphics.framework in Frameworks */,
 				F06EA76C190FF250009276FE /* UIKit.framework in Frameworks */,
-				F06EA7A2190FF3CF009276FE /* libBoniBeaconSDK.a in Frameworks */,
 				F06EA768190FF250009276FE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,9 +116,9 @@
 		F06EA766190FF250009276FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F0A821EE19D596DC0009E6DC /* libBoniBeaconSDK_v0.2.a */,
 				F06EA7B01910D642009276FE /* CoreBluetooth.framework */,
 				F06EA7AD1910D425009276FE /* CoreLocation.framework */,
-				F06EA7A1190FF3CF009276FE /* libBoniBeaconSDK.a */,
 				F06EA767190FF250009276FE /* Foundation.framework */,
 				F06EA769190FF250009276FE /* CoreGraphics.framework */,
 				F06EA76B190FF250009276FE /* UIKit.framework */,
@@ -414,6 +414,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/Boni/Development/beacon_sdk_git/ios/Library,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -431,6 +432,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/Boni/Development/beacon_sdk_git/ios/Library,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

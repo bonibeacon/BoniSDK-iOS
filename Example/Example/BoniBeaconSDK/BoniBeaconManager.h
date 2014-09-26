@@ -11,7 +11,7 @@
 #import "BoniBeacon.h"
 #import "BoniBeaconRegion.h"
 
-#define BoniBeaconSDKVersion "v0.1"
+#define BoniBeaconSDKVersion "v0.2"
 
 @class BoniBeaconManager;
 
@@ -107,6 +107,18 @@ monitoringDidFailForRegion:(BoniBeaconRegion *)region
 - (void)boniBeaconManager:(BoniBeaconManager *)beaconManager
             didExitRegion:(BoniBeaconRegion *)region;
 
+
+/**
+ * Tells the delegate that the authorization status.
+ *
+ * @param beaconManager boni beacon manager object reporting the event
+ * @param status authorization status
+ *
+ * @return void
+ */
+- (void)boniBeaconManager:(BoniBeaconManager *)beaconManager
+            didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+
 @end
 
 @interface BoniBeaconManager : NSObject <CLLocationManagerDelegate>
@@ -170,4 +182,29 @@ monitoringDidFailForRegion:(BoniBeaconRegion *)region
  */
 - (void)stopUpdatingLocation;
 
+/**
+ *
+ * When the current authorization status is kCLAuthorizationStatusNotDetermined, this method runs asynchronously
+ * and prompts the user to grant permission to the app to use location services. The user prompt contains the text from the
+ * NSLocationWhenInUseUsageDescription key in your app’s Info.plist file, and the presence of that key is required when
+ * calling this method.
+ */
+- (void)requestWhenInUseAuthorization;
+
+/**
+ *
+ * When the current authorization status is kCLAuthorizationStatusNotDetermined, this method runs asynchronously
+ * and prompts the user to grant permission to the app to use location services. The user prompt contains the text from the
+ * NSLocationAlwaysUsageDescription key in your app’s Info.plist file, and the presence of that key is required when
+ * calling this method.
+ */
+- (void)requestAlwaysAuthorization;
+
+/**
+ *
+ * The authorization status of a given app is managed by the system and determined by several factors.
+ *
+ * return A value indicating whether the app is authorized to use location services.
+ */
++ (CLAuthorizationStatus)authorizationStatus;
 @end
